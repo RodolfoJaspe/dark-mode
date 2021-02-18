@@ -30,7 +30,7 @@ Follow these steps for completing your project.
 - [ ] Submit a Pull-Request to merge <firstName-lastName> Branch into main (student's Repository). **Please don't merge your own pull request**
 - [ ] From the home page of your repo, make sure you have your branch selected
 - [ ] Copy the URL and paste it into Canvas
-  
+
 ## Minimum Viable Product
 
 - [ ] Build a custom hook that let's you save data to localStorage
@@ -69,6 +69,7 @@ import { useState } from "react";
 export const useLocalStorage = (key, initialValue) => {
   const [storedValue, setStoredValue] = useState(() => {
     const item = window.localStorage.getItem(key);
+
     return item ? JSON.parse(item) : initialValue;
   });
 
@@ -84,7 +85,7 @@ export const useLocalStorage = (key, initialValue) => {
   - `setValue` should look something like this:
 
 ```js
-const setValue = value => {
+const setValue = (value) => {
   // Save state
   setStoredValue(value);
   // Save to local storage
