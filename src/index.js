@@ -7,7 +7,7 @@ import Navbar from "./components/Navbar";
 import "./styles.scss";
 
 const App = () => {
-  const initialValue = false
+  const initialValue = false;
   const [coinData, setCoinData] = useState([]);
   const [darkMode, setDarkMode] = useLocalStorage(initialValue, "");
 
